@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+
+<script type="text/javascript" src="js/dragable.js"></script>
+<script type="text/javascript" src="js/buttons.js"></script>
+
+</head>
+<body>
+<h1>Dynamische Stundenplanung</h1>
+
+<p>Zunächst sollte ein Unterrichtsgegenstand gewählt werden. (Prinzip: Erstellen der Stundenplanung aus der Mitte heraus. -Link Literatur einzufügen-)</p>
+
+<div class="container">
+	<div class="backgroundLernprodukte"> Unterrichtsgegenstand
+		<div draggable="true" class="box">Potenzfunktionen</div>
+	</div>
+</div>
+
+<h2> Kompetenzschwerpunkt(e) </h2>
+
+<p>Welche Kompetenzschwerpunkte sollen gesetzt werden? </p>
+<p>Woher kommen diese Kompetenzschwerpunkte maßgeblich?
+<ul>
+<li> Kernlehrplan(KLP)? -> Landesebene. mögliche Probleme: Grobformulierungen und schlecht fassbar. </li>
+<li> Schulinterner Lehrplan (SILP)? -> Schulebene. Ausdifferenzierter. mögliche Probleme: Einschränkung / linearisiertes Anchoring ( copy & paste) -> auf Erklärungen achten </li>
+<li> eigene Kompetenzen / Kompetenzformulierung. Zuordbar zu Inhaltsfeldern, aber nicht gelistet in KLP oder SILP. Besonders Erläuterungsbedürftig. Fallen bei z.B. fächerübergreifenden Stunden, da <br>
+eigenes Fach eventuell zuwenig vertreten. </li>
+</ul>
+</p>
+
+<select name="abc" onchange="showDiv(value);">
+    <option value="-1">Wähle Literatur</option>
+    <option value="Schema_Notenbildung">Schema und Beispiele zur Notenbildung</option> 
+    <option value="MatheKognitiveAktivierung">Kognitive Aktivierung im Mathematikunterricht</option>
+    <option value="clear">Clear All</option>
+</select>
+
+<div class="containerPDF">
+	<div id="Schema_Notenbildung" style="display: none;">
+	<embed src="PDFs/Noten/Anlage_4_Schema_und_Beispiele_zur_Notenbildung.pdf" width="100%" height="600px" />
+	</div>
+
+	<div id="MatheKognitiveAktivierung" style="display: none;">
+	<embed src="PDFs/Mathematik/Wirksamer Unterricht - Band 2_Fauth&Leuders (2018)_Kognitive Aktivierung.pdf" width="100%" height="600px" />
+	</div>
+	
+</div>
+
+<!-- Literatursachen -->
+<a class="buttonEinstieg" href="javascript:void()" role="button" onclick="showDiv('meyer')">Guter Unterricht nach Meyer</a>
+<a class="buttonEinstieg" href="javascript:void()" role="button" onclick="showDiv('leisenLernprodukte')">Erklärung zu Lern-Lehr-Modellen <br> und insbesondere <br>LERNPRODUKTEN</a>
+<a class="buttonEinstieg" href="javascript:void()" role="button" onclick="showDiv('unterrichtsthema-und-gegenstand')">Unterschied von Unterrichtsgegenstand <br>und Unterrichtsthema</a>
+
+<div class="containerPDF">
+	<div id="meyer" style="display: none;">
+	<embed src="PDFs/Meyer10.pdf" width="100%" height="600px" />
+	</div>
+
+	<div id="leisenLernprodukte" style="display: none;">
+	<embed src="PDFs/LernprodukteLeisen.pdf" width="100%" height="600px" />
+	</div>
+
+	<div id="unterrichtsthema-und-gegenstand" style="display: none;">
+	<embed src="PDFs/Unterrichtsgegenstand-und-thema.pdf" width="100%" height="600px" />
+	</div>
+</div>
+
+<h2>Unterrichtsverlauf</h2>
+<div class="container">
+  <div class="backgroundEinstieg"> Einstieg
+    <div draggable="true" class="box">Sozialform</div>
+	<div draggable="true" class="box">Inhalt</div>
+	<div draggable="true" class="box">Methodik</div>
+	<div draggable="true" class="box">Sonstiges</div>
+  </div>
+  <div class="backgroundErarbeitung"> Erarbeitung 1
+    <div draggable="true" class="box">Sozialform</div>
+	<div draggable="true" class="box">Inhalt</div>
+	<div draggable="true" class="box">Methodik</div>
+	<div draggable="true" class="box">Sonstiges</div>
+  </div>
+  <div class="backgroundSicherung"> Sicherung 1
+    <div draggable="true" class="box">Sozialform</div>
+	<div draggable="true" class="box">Inhalt</div>
+	<div draggable="true" class="box">Methodik</div>
+	<div draggable="true" class="box">Sonstiges</div>
+  </div>
+  <div class="backgroundErarbeitung"> Erarbeitung 2
+    <div draggable="true" class="box">Sozialform</div>
+	<div draggable="true" class="box">Inhalt</div>
+	<div draggable="true" class="box">Methodik</div>
+	<div draggable="true" class="box">Sonstiges</div>
+  </div>
+  <div class="backgroundSicherung"> Sicherung 2
+    <div draggable="true" class="box">Sozialform</div>
+	<div draggable="true" class="box">Inhalt</div>
+	<div draggable="true" class="box">Methodik</div>
+	<div draggable="true" class="box">Sonstiges</div>
+  </div>
+</div>
+<h3> Drag & Drop der Wahlmöglichkeiten </h3>
+<p>Entsprechende Möglichkeiten finden sich hierunter und können nach oben in die Planung gezogen werden:</p>
+
+<a class="buttonEinstieg" href="javascript:void()" role="button" onclick="showDiv('einstiegsoptionen')">Einstiegsoptionen</a>
+<a class="buttonErarbeitung" href="javascript:void()" role="button" onclick="showDiv('erarbeitungsoptionen')">Erarbeitungsoptionen</a>
+<a class="buttonSicherung" href="javascript:void()" role="button" onclick="showDiv('sicherungsoptionen')">Sicherungsoptionen</a>
+<a class="buttonLernprodukte" href="javascript:void()" role="button" onclick="showDiv('lernprodukte')">Lernprodukte</a>
+
+
+<div class="container">
+  <div id="einstiegsoptionen" class="backgroundEinstieg" style="display: none;"> Einstiegsoptionen
+    <div draggable="true" class="box">
+      <p>Unterrichtsmethode <a href="Unterrichtsmethoden/pingpong.html">Ping Pong Methode</a></p>
+	</div>
+	
+	<div draggable="true" class="box">
+	  <p>Sozialform: Lehrervortrag</p>
+	</div>
+	<div draggable="true" class="box">
+	  <p>Sozialform: Unterrichtsgespräch</p>
+	</div>
+	<div draggable="true" class="box">
+	  <p>Sozialform: Schülervortrag</p>
+	</div>
+	<div draggable="true" class="box">
+      <p>Unterrichtsmethode <a href="Unterrichtsmethoden/pingpong.html">Ping Pong Methode</a></p>
+	</div>
+  </div>
+  <div id="erarbeitungsoptionen" class="backgroundErarbeitung" style="display: none;">Erarbeitungsoptionen
+    <div draggable="true" class="box">Filler B1</div>
+	<div draggable="true" class="box">Filler B2</div>
+	<div draggable="true" class="box">Filler B3</div>
+  </div>
+  <div id="sicherungsoptionen" class="backgroundSicherung" style="display: none;">Sicherungsoptionen
+    <div draggable="true" class="box">Filler C1</div>
+	<div draggable="true" class="box">Filler C2</div>
+	<div draggable="true" class="box">Filler C3</div>
+  </div>
+  
+  <div id="lernprodukte" class="backgroundLernprodukte" style="display: none;"> Lernprodukte
+    <div draggable="true" class="box">Produkt 1</div>	
+    <div draggable="true" class="box">Produkt 2</div>	
+    <div draggable="true" class="box">Produkt 3</div>
+  </div>
+</div>
+
+<h2> Erkennung der Lernprogression </h2>
+
+</body>
+</html>
