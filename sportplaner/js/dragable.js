@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     items.forEach(function (item) {
       item.classList.remove('over');
     });
+	
+	calculateNewTimes();
   }
   
   
@@ -63,7 +65,53 @@ document.addEventListener('DOMContentLoaded', (event) => {
     item.addEventListener('dragend', handleDragEnd, false);
   });
 });
+
+function calculateNewTimes(){
+	calculateNewTimesInEinstieg();
+	calculateNewTimesInErarbeitung();
+	calculateNewTimesInSicherung();
+}
   
+function calculateNewTimesInEinstieg(){
+	
+	let items = document.querySelectorAll('.container .einstiegDisplay .box div');
+	let x = 0;
+	items.forEach(function(item) {
+		x += parseFloat(item.dataset.value);
+		console.log(x);
+		const content = 'benötigte Zeit: ' + x + ' Minuten';
+		document.getElementById('einstiegZeitgesamt').innerHTML = content;
+  });
+}  
+function calculateNewTimesInErarbeitung(){
+	
+	let items = document.querySelectorAll('.container .erarbeitungDisplay .box div');
+	let x = 0;
+	items.forEach(function(item) {
+		x += parseFloat(item.dataset.value);
+		console.log(x);
+		const content = 'benötigte Zeit: ' + x + ' Minuten';
+		document.getElementById('erarbeitungZeitgesamt').innerHTML = content;
+  });
+}  
+function calculateNewTimesInSicherung(){
+	
+	let items = document.querySelectorAll('.container .sicherungDisplay .box div');
+	let x = 0;
+	items.forEach(function(item) {
+		x += parseFloat(item.dataset.value);
+		console.log(x);
+		const content = 'benötigte Zeit: ' + x + ' Minuten';
+		document.getElementById('sicherungZeitgesamt').innerHTML = content;
+  });
+}
+	
+	
+	
+	
+	
+	
+	
   
   
   

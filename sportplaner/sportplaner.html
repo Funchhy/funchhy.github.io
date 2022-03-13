@@ -11,7 +11,7 @@
 <h1>Dynamische Sportstundenplanung</h1>
 <p>Link zur Hauptseite zurück <a href="../index.html">Klick</a>. New</p>
 
-<div class="container">
+<!-- <div class="container">
 	<div class="backgroundLernprodukte"> Unterrichtsgegenstand
 		<div draggable="true" class="box">Potenzfunktionen</div>
 	</div>
@@ -34,10 +34,10 @@
 	<embed src="PDFs/Mathematik/Wirksamer Unterricht - Band 2_Fauth&Leuders (2018)_Kognitive Aktivierung.pdf" width="100%" height="600px" />
 	</div>
 	
-</div>
+</div> -->
 
 <!-- Literatursachen -->
-<a class="buttonEinstieg" href="javascript:void()" role="button" onclick="showDiv('meyer')">Guter Unterricht nach Meyer</a>
+<!-- <a class="buttonEinstieg" href="javascript:void()" role="button" onclick="showDiv('meyer')">Guter Unterricht nach Meyer</a>
 <a class="buttonEinstieg" href="javascript:void()" role="button" onclick="showDiv('leisenLernprodukte')">Erklärung zu Lern-Lehr-Modellen <br> und insbesondere <br>LERNPRODUKTEN</a>
 <a class="buttonEinstieg" href="javascript:void()" role="button" onclick="showDiv('unterrichtsthema-und-gegenstand')">Unterschied von Unterrichtsgegenstand <br>und Unterrichtsthema</a>
 
@@ -53,39 +53,27 @@
 	<div id="unterrichtsthema-und-gegenstand" style="display: none;">
 	<embed src="PDFs/Unterrichtsgegenstand-und-thema.pdf" width="100%" height="600px" />
 	</div>
-</div>
+</div> -->
 
-<h2>Unterrichtsverlauf</h2>
+<h2>Stundenverlauf</h2>
 <div class="container">
-  <div class="backgroundEinstieg"> Einstieg
-    <div draggable="true" class="box">Sozialform</div>
-	<div draggable="true" class="box">Inhalt</div>
-	<div draggable="true" class="box">Methodik</div>
-	<div draggable="true" class="box">Sonstiges</div>
+  <div class="backgroundEinstieg einstiegDisplay">  Einstieg<div id="einstiegZeitgesamt">benötigte Zeit: </div>
+    <div draggable="true" class="box"> <div data-value='0'> Übung/Pause - Placeholder </div></div>
+    <div draggable="true"  class="box"><div data-value='0'>Übung/Pause - Placeholder </div></div>
+    <div draggable="true"  class="box"><div data-value='0'>Übung/Pause - Placeholder </div></div>
+    <div draggable="true"  class="box"><div data-value='0'>Übung/Pause - Placeholder </div></div>
   </div>
-  <div class="backgroundErarbeitung"> Erarbeitung 1
-    <div draggable="true" class="box">Sozialform</div>
-	<div draggable="true" class="box">Inhalt</div>
-	<div draggable="true" class="box">Methodik</div>
-	<div draggable="true" class="box">Sonstiges</div>
+  <div class="backgroundErarbeitung erarbeitungDisplay">  Hauptphase<div id="erarbeitungZeitgesamt">benötigte Zeit: </div>
+    <div draggable="true" class="box"> <div data-value='0'> Übung/Pause - Placeholder </div></div>
+    <div draggable="true"  class="box"><div data-value='0'>Übung/Pause - Placeholder </div></div>
+    <div draggable="true"  class="box"><div data-value='0'>Übung/Pause - Placeholder </div></div>
+    <div draggable="true"  class="box"><div data-value='0'>Übung/Pause - Placeholder </div></div>
   </div>
-  <div class="backgroundSicherung"> Sicherung 1
-    <div draggable="true" class="box">Sozialform</div>
-	<div draggable="true" class="box">Inhalt</div>
-	<div draggable="true" class="box">Methodik</div>
-	<div draggable="true" class="box">Sonstiges</div>
-  </div>
-  <div class="backgroundErarbeitung"> Erarbeitung 2
-    <div draggable="true" class="box">Sozialform</div>
-	<div draggable="true" class="box">Inhalt</div>
-	<div draggable="true" class="box">Methodik</div>
-	<div draggable="true" class="box">Sonstiges</div>
-  </div>
-  <div class="backgroundSicherung"> Sicherung 2
-    <div draggable="true" class="box">Sozialform</div>
-	<div draggable="true" class="box">Inhalt</div>
-	<div draggable="true" class="box">Methodik</div>
-	<div draggable="true" class="box">Sonstiges</div>
+  <div class="backgroundSicherung sicherungDisplay"> Ausklang<div id="sicherungZeitgesamt">benötigte Zeit: </div>
+    <div draggable="true" class="box"> <div data-value='0'> Übung/Pause - Placeholder </div></div>
+    <div draggable="true"  class="box"><div data-value='0'>Übung/Pause - Placeholder </div></div>
+    <div draggable="true"  class="box"><div data-value='0'>Übung/Pause - Placeholder </div></div>
+    <div draggable="true"  class="box"><div data-value='0'>Übung/Pause - Placeholder </div></div>
   </div>
 </div>
 <h3> Drag & Drop der Wahlmöglichkeiten </h3>
@@ -93,48 +81,95 @@
 
 <a class="buttonEinstieg" href="javascript:void()" role="button" onclick="showDiv('einstiegsoptionen')">Einstiegsoptionen</a>
 <a class="buttonErarbeitung" href="javascript:void()" role="button" onclick="showDiv('erarbeitungsoptionen')">Erarbeitungsoptionen</a>
-<a class="buttonSicherung" href="javascript:void()" role="button" onclick="showDiv('sicherungsoptionen')">Sicherungsoptionen</a>
-<a class="buttonLernprodukte" href="javascript:void()" role="button" onclick="showDiv('lernprodukte')">Lernprodukte</a>
+<a class="buttonSicherung" href="javascript:void()" role="button" onclick="showDiv('sicherungsoptionen')">Ausklangoptionen</a>
 
 
 <div class="container">
   <div id="einstiegsoptionen" class="backgroundEinstieg" style="display: none;"> Einstiegsoptionen
-    <div draggable="true" class="box">
-      <p>Unterrichtsmethode <a href="Unterrichtsmethoden/pingpong.html">Ping Pong Methode</a></p>
+    <div draggable="true"  class="box">
+		<div data-value='2'>
+			<p>Ein Satz Pull Ups <a href="https://en.wikipedia.org/wiki/Pull-up_(exercise)">(wiki)</a></p>
+		</div>
 	</div>
-	
-	<div draggable="true" class="box">
-	  <p>Sozialform: Lehrervortrag</p>
+    <div draggable="true"  class="box">
+		<div data-value='2'>
+			<p>Ein Satz Push Ups <a href="https://en.wikipedia.org/wiki/Push-up">(wiki)</a></p>
+		</div>
 	</div>
-	<div draggable="true" class="box">
-	  <p>Sozialform: Unterrichtsgespräch</p>
+    <div draggable="true"  class="box">
+		<div data-value='2'>
+			<p>Ein Satz Squats <a href="https://en.wikipedia.org/wiki/Squat_(exercise)">(wiki)</a></p>
+		</div>
 	</div>
-	<div draggable="true" class="box">
-	  <p>Sozialform: Schülervortrag</p>
+	    <div draggable="true"  class="box">
+		<div data-value='2'>
+			<p>Ein Satz Pull Ups <a href="https://en.wikipedia.org/wiki/Pull-up_(exercise)">(wiki)</a></p>
+		</div>
 	</div>
-	<div draggable="true" class="box">
-      <p>Unterrichtsmethode <a href="Unterrichtsmethoden/pingpong.html">Ping Pong Methode</a></p>
+    <div draggable="true"  class="box">
+		<div data-value='2'>
+			<p>Ein Satz Push Ups <a href="https://en.wikipedia.org/wiki/Push-up">(wiki)</a></p>
+		</div>
 	</div>
+    <div draggable="true"  class="box">
+		<div data-value='2'>
+			<p>Ein Satz Squats <a href="https://en.wikipedia.org/wiki/Squat_(exercise)">(wiki)</a></p>
+		</div>
+	</div>
+
   </div>
   <div id="erarbeitungsoptionen" class="backgroundErarbeitung" style="display: none;">Erarbeitungsoptionen
-    <div draggable="true" class="box">Filler B1</div>
-	<div draggable="true" class="box">Filler B2</div>
-	<div draggable="true" class="box">Filler B3</div>
+
+	<div draggable="true"  class="box">
+		<div data-value='2'>
+			<p>Ein Satz Pull Ups <a href="https://en.wikipedia.org/wiki/Pull-up_(exercise)">(wiki)</a></p>
+		</div>
+	</div>
+    <div draggable="true"  class="box">
+		<div data-value='2'>
+			<p>Ein Satz Push Ups <a href="https://en.wikipedia.org/wiki/Push-up">(wiki)</a></p>
+		</div>
+	</div>
+    <div draggable="true"  class="box">
+		<div data-value='2'>
+			<p>Ein Satz Squats <a href="https://en.wikipedia.org/wiki/Squat_(exercise)">(wiki)</a></p>
+		</div>
+	</div>
+		<div draggable="true"  class="box">
+		<div data-value='2'>
+			<p>Ein Satz Pull Ups <a href="https://en.wikipedia.org/wiki/Pull-up_(exercise)">(wiki)</a></p>
+		</div>
+	</div>
+    <div draggable="true"  class="box">
+		<div data-value='2'>
+			<p>Ein Satz Push Ups <a href="https://en.wikipedia.org/wiki/Push-up">(wiki)</a></p>
+		</div>
+	</div>
+    <div draggable="true"  class="box">
+		<div data-value='2'>
+			<p>Ein Satz Squats <a href="https://en.wikipedia.org/wiki/Squat_(exercise)">(wiki)</a></p>
+		</div>
+	</div>
+
   </div>
   <div id="sicherungsoptionen" class="backgroundSicherung" style="display: none;">Sicherungsoptionen
-    <div draggable="true" class="box">Filler C1</div>
-	<div draggable="true" class="box">Filler C2</div>
-	<div draggable="true" class="box">Filler C3</div>
-  </div>
-  
-  <div id="lernprodukte" class="backgroundLernprodukte" style="display: none;"> Lernprodukte
-    <div draggable="true" class="box">Produkt 1</div>	
-    <div draggable="true" class="box">Produkt 2</div>	
-    <div draggable="true" class="box">Produkt 3</div>
+    <div draggable="true" class="box">
+      <p>Pull Ups <a href="https://en.wikipedia.org/wiki/Pull-up_(exercise)">(wiki)</a></p>
+	</div>
+	    <div draggable="true" class="box">
+      <p>Pull Ups <a href="https://en.wikipedia.org/wiki/Pull-up_(exercise)">(wiki)</a></p>
+	</div>
+	    <div draggable="true" class="box">
+      <p>Pull Ups <a href="https://en.wikipedia.org/wiki/Pull-up_(exercise)">(wiki)</a></p>
+	</div>
+	    <div draggable="true" class="box">
+      <p>Pull Ups <a href="https://en.wikipedia.org/wiki/Pull-up_(exercise)">(wiki)</a></p>
+	</div>
+	<div draggable="true" class="box">
+      <p>Pull Ups <a href="https://en.wikipedia.org/wiki/Pull-up_(exercise)">(wiki)</a></p>
+	</div>
   </div>
 </div>
-
-<h2> Erkennung der Lernprogression </h2>
 
 </body>
 </html>
