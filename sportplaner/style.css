@@ -84,6 +84,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  pointer: cursor;
 }
 
 .buttonErarbeitung {
@@ -95,6 +96,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  pointer: cursor;
 }
 
 .buttonSicherung {
@@ -106,6 +108,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  pointer: cursor;
 }
 
 .buttonLernprodukte {
