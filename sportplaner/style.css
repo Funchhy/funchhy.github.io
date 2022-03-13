@@ -55,9 +55,9 @@
 }
 
 
-.container > .backgroundEinstieg { grid-area: backgroundEinstieg }
-.container > .backgroundErarbeitung { grid-area: backgroundErarbeitung }
-.container > .backgroundSicherung { grid-area: backgroundSicherung }
+.container > .backgroundEinstieg { grid-area: backgroundEinstieg; }
+.container > .backgroundErarbeitung { grid-area: backgroundErarbeitung; }
+.container > .backgroundSicherung { grid-area: backgroundSicherung; }
 .containerPDF {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

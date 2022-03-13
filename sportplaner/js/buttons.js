@@ -1,4 +1,4 @@
-const pdfIDs = ["Schema_Notenbildung", "MatheKognitiveAktivierung"]
+//const pdfIDs = ["Schema_Notenbildung", "MatheKognitiveAktivierung"]
 
 function showDiv(id) {
 	if(id == "-1"){
